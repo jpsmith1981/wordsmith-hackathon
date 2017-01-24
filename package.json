@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "alexa-sdk": "^1.0.6",
+    "node-weatherunderground": "^1.2.0",
     "wordsmith-node-sdk": "^1.1.0"
   }
 }
