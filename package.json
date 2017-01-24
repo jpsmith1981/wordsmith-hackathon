@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "invoke": "aws lambda invoke --function-name \"livelyAlexaSkill\" --payload fileb:///Users/scottbrenton/dev/wordsmith-alexa-starter-node/test/invocation.json test/out.txt && cat test/out.txt",
+    "invoke": "aws lambda invoke --function-name \"livelyAlexaSkill\" --payload fileb:///Users/joshua.smith/Alexa/hackathon/wordsmith-alexa-starter-node/test/invocation.json test/out.txt && cat test/out.txt",
     "test": "node test/test.js",
     "update": "npm run zip && npm run upload",
-    "upload": "aws lambda update-function-code --function-name \"livelyAlexaSkill\" --zip-file fileb:///Users/scottbrenton/dev/wordsmith-alexa-starter-node/build/lambda.zip",
+    "upload": "aws lambda update-function-code --function-name \"livelyAlexaSkill\" --zip-file fileb:///Users/joshua.smith/Alexa/hackathon/wordsmith-alexa-starter-node/build/lambda.zip",
     "zip": "zip -r build/lambda.zip . -x \"package.json\" -x \"*.git*\""
   },
   "author": "",
