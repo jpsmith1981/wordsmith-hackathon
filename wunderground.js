@@ -34,5 +34,5 @@ WunderApi.prototype.getWeatherConditions = function( city, state, callback ) {
     });
 }
 
-var sut = new WunderApi();
-var data = sut.getWeatherConditions("San Diego", "CA", console.log);
+//var sut = new WunderApi();
+//var data = sut.getWeatherConditions("San Diego", "CA", console.log);
