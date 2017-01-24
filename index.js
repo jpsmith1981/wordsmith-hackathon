@@ -12,6 +12,7 @@ var handlers = {
 
         const personSlot = this.event.request.intent.slots.Person;
         let personName;
+        this.attributes['previousIntent'] = 'GetCurrentStatusIntent';
         if(personSlot && personSlot.value){
             personName = personSlot.value;
             this.attributes['personName'] = personName;
@@ -20,7 +21,7 @@ var handlers = {
             personName = this.attributes['personName'] || null;
         }
 
-        if(personName){
+        if(personName) {
             console.log(`Slot name ${personName}`);
             wordsmith.projects.find('lively-narrative')
             .then(project => project.templates.find('lively-narrative-v1'))
@@ -49,6 +50,31 @@ var handlers = {
         else{
             this.emit(':ask', 'Who are you talking about');
         }
+        
+    },
+
+    'SpecifyPersonIntent': function(){
+        var self = this;
+
+        const personSlot = this.event.request.intent.slots.Person;
+        let personName;
+        if(personSlot && personSlot.value){
+            personName = personSlot.value;
+            this.attributes['personName'] = personName;
+        }
+        else{
+            this.emit(':ask', 'Who are you talking about');
+            return;
+        }
+
+        const previousIntent = this.attributes['previousIntent'];
+        if(!previousIntent){
+            this.emit(':ask', 'what do you want to know?');
+        }
+        else{
+            this.emit(previousIntent);
+        }
+
         
     }
 };
