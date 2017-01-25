@@ -84,10 +84,21 @@ var handlers = {
 
     'AMAZON.NoIntent': function(){
         const previousIntent = this.attributes['previousIntent']; 
-        if(previousIntent == 'GetInteractionDetailsIntent'){
-            this.emit(':ask', 'Ok, They are not going to be angry, just disapointed');
+        if(previousIntent == 'GetInteractionDetailsIntent') {
+            var data = this.getCurrentPersonNameOrNull();
+            var pronoun = "They";
+            if (data != null) {
+                var g = (data.gender + '').toLowerCase().trim();
+                if (g === 'male'){
+                    pronoun = 'he';
+                }
+                if (g === 'female'){
+                    pronoun = 'she';
+                }
+            }
+            this.emit(':ask', 'Ok, ' + pronoun + ' are not going to be angry, just disappointed');
         }
-        else{
+        else {
             this.emit(':ask', 'We do not understand');
         }
 
