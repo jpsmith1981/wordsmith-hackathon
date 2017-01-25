@@ -11,7 +11,7 @@ var handlers = {
 
 
     'AMAZON.HelpIntent': function() {
-        var personName = getCurrentPersonNameOrNull(this);
+        const personName = this.attributes['personName'] || null;
         if (personName != null) {
             this.emit(':ask', 'I can tell you about how ' + personName + ' is doing.  Try saying, how is ' + personName );
         } else {
@@ -75,22 +75,22 @@ var handlers = {
     'AMAZON.NoIntent': function(){
         const previousIntent = this.attributes['previousIntent']; 
         if(previousIntent == 'GetInteractionDetailsIntent') {
-            var personName = getCurrentPersonNameOrNull(this);
+            const personName = this.attributes['personName'] || null;
             var data = session.findProfileByNameOrNull(personName);
-            var pronoun = "They";
+            var pronoun = "They are";
             if (data != null) {
                 var g = (data.gender + '').toLowerCase().trim();
                 if (g === 'male'){
-                    pronoun = 'he';
+                    pronoun = 'he is';
                 }
                 if (g === 'female'){
-                    pronoun = 'she';
+                    pronoun = 'she is';
                 }
             }
-            this.emit(':ask', 'Ok, ' + pronoun + ' are not going to be angry, just disappointed.');
+            this.emit(':tell', 'Ok, ' + pronoun + ' not going to be angry, just disappointed. bye now');
         }
         else {
-            this.emit(':ask', 'We do not understand');
+            this.emit('HelpIntent');
         }
 
     },
@@ -120,18 +120,6 @@ var handlers = {
         
     }
 };
-
-function getCurrentPersonNameOrNull(context){
-
-    const personSlot = context.event.request.intent.slots.Person;
-    let personName;
-    if(personSlot && personSlot.value) {
-        personName = personSlot.value;
-    } else {
-        personName = context.attributes['personName'] || null;
-    }
-    return personName;
-}
 
 function executeIntent(context, intentName) {
     const personSlot = context.event.request.intent.slots.Person;
