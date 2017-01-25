@@ -81,5 +81,22 @@ module.exports = {
                 {'GetIncidentDetailsIntent': false},
                 {'GetInteractionDetailsIntent': false}
             ]}
+    },
+    findProfileByNameOrNull: function(personName){
+        var session = this;
+        var target = (personName + '').toLowerCase().trim();
+        var data = null;
+        session['Mom'].aliases.forEach(item =>{
+            if (item === target){
+                data = session['Mom'].profile;
+            }
+        });
+        session['Dad'].aliases.forEach(item =>{
+            if (item === target){
+                data = session['Dad'].profile;
+            }
+        });
+        return data;
     }
+
 };
