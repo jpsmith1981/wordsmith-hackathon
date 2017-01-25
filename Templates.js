@@ -5,9 +5,7 @@ module.exports = {
     'GetIncidentDetailsIntent': 'getincidentdetails',
     'GetInteractionDetailsIntent': 'getinteractiondetails',
     findUnused: function(intents){
-        if(intents.indexOf('GetCurrentStatusIntent') == -1){
-            return 'GetCurrentStatusIntent';
-        }
+        
         if(intents.indexOf('GetLocationDetailsIntent') == -1){
             return 'GetLocationDetailsIntent';
         }
@@ -20,5 +18,7 @@ module.exports = {
         if(intents.indexOf('GetInteractionDetailsIntent') == -1){
             return 'GetInteractionDetailsIntent';
         }
+
+        return null;
     }
 }
