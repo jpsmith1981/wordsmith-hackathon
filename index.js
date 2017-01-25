@@ -128,7 +128,7 @@ function getCurrentPersonNameOrNull(context){
     if(personSlot && personSlot.value) {
         personName = personSlot.value;
     } else {
-        personName = null;
+        personName = context.attributes['personName'] || null;
     }
     return personName;
 }
