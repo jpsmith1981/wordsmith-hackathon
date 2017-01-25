@@ -3,7 +3,7 @@
  */
 module.exports = {
     "Mom": {
-        aliases:['mom','mom\'s'],
+        aliases:['mom','mom\'s', 'shelley', 'shelley\'s'],
         profile: {
             userid:1,
             name:'Shelley',
@@ -43,7 +43,7 @@ module.exports = {
         ]}
     },
     "Dad":{
-        aliases: ['dad','dad\'s'],
+        aliases: ['dad','dad\'s','richard', 'richard\'s'],
         profile: {
             userid:2,
             name:'Richard',
