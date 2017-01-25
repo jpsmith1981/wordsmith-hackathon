@@ -36,7 +36,6 @@ GetLocationDetailsIntent about {Person} whereabouts
 GetLocationDetailsIntent update on {Person} whereabouts
 GetLocationDetailsIntent about {Person} location
 GetLocationDetailsIntent what can you tell me about {Person} location
-GetLocationDetailsIntent how about location
 GetActivityDetailsIntent more about {Person} challenges
 GetActivityDetailsIntent more about {Person} steps
 GetActivityDetailsIntent more about {Person} activity
@@ -52,7 +51,6 @@ GetActivityDetailsIntent how many challenges {Person} has done
 GetActivityDetailsIntent how many points {Person} has
 GetActivityDetailsIntent how active {Person} is
 GetActivityDetailsIntent how active {Person} has been
-GetActivityDetailsIntent about {Person} movement
 GetActivityDetailsIntent how many points does {Person} have
 GetActivityDetailsIntent tell me how many points {Person} has
 GetActivityDetailsIntent tell me how many steps {Person} has taken
@@ -70,7 +68,6 @@ GetActivityDetailsIntent if {Person} took any steps today
 GetActivityDetailsIntent if {Person} completed any challenges
 GetActivityDetailsIntent if {Person} started any challenges
 GetActivityDetailsIntent if {Person} had any activity today
-GetActivityDetailsIntent how about activity
 SpecifyPersonIntent {Person}
 SpecifyPersonIntent I'm talking about {Person}
 SpecifyPersonIntent I would like to know about {Person}
@@ -96,9 +93,6 @@ GetIncidentDetailsIntent if {Person} has fallen
 GetIncidentDetailsIntent if {Person} has had an emergency
 GetIncidentDetailsIntent if {Person} has has been safe
 GetIncidentDetailsIntent if {Person} is safe
-GetIncidentDetailsIntent how about emergency calls
-GetIncidentDetailsIntent how about falls
-GetIncidentDetailsIntent how about safety
 GetInteractionDetailsIntent who did {Person} talk to
 GetInteractionDetailsIntent who did {Person} interact with
 GetInteractionDetailsIntent did {Person} talk to anyone
@@ -115,10 +109,6 @@ GetInteractionDetailsIntent is {Person} lonely
 GetInteractionDetailsIntent tell me if is {Person} lonely
 GetInteractionDetailsIntent tell me if anyone talked to {Person} 
 GetInteractionDetailsIntent tell me if anyone talked to {Person} lately
-GetInteractionDetailsIntent how about interactions
-GetInteractionDetailsIntent how about activities
-GetInteractionDetailsIntent how about challenges
-GetInteractionDetailsIntent how about steps
 TellMeMoreIntent what else
 TellMeMoreIntent what else can you tell me 
 TellMeMoreIntent what else can you tell me about {Person}

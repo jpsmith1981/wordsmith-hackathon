@@ -1,44 +1,30 @@
 {
   "session": {
-    "new": false,
-    "sessionId": "amzn1.echo-api.session.[unique-value-here]",
-    "attributes": {},
-    "user": {
-      "userId": "amzn1.ask.account.[unique-value-here]"
-    },
+    "sessionId": "SessionId.ab0ab733-3912-41d0-ad34-300376ec91d8",
     "application": {
-      "applicationId": "amzn1.echo-sdk-ams.app.[unique-value-here]"
-    }
-  },
-  "version": "1.0",
-  "request": {
-    "locale": "en-US",
-    "timestamp": "2016-10-27T21:06:28Z",
-    "type": "IntentRequest",
-    "requestId": "amzn1.echo-api.request.[unique-value-here]",
-    "intent": {
-      "slots": {
-        
-      },
-      "name": "GetCurrentStatusIntent"
-    }
-  },
-  "context": {
-    "AudioPlayer": {
-      "playerActivity": "IDLE"
+      "applicationId": "amzn1.ask.skill.0e7fdc80-b448-42e6-9094-685fdc57f12f"
     },
-    "System": {
-      "device": {
-        "supportedInterfaces": {
-          "AudioPlayer": {}
-        }
-      },
-      "application": {
-        "applicationId": "amzn1.echo-sdk-ams.app.[unique-value-here]"
-      },
-      "user": {
-        "userId": "amzn1.ask.account.[unique-value-here]"
-      }
+    "attributes": {
+      "personName": "mom",
+      "previousIntent": "GetInteractionDetailsIntent",
+      "history": [
+        "GetInteractionDetailsIntent"
+      ]
+    },
+    "user": {
+      "userId": "amzn1.ask.account.AFJZYE3RDY7BONXY354DYWPN36EKS4RCPQ3ZTZHVO55V52HUTWNQBR7TZYT6XUE3L5PE7TZF2RR23QKXPDLMOOSW7ZHBB3HC5HYFDURGZYNYV3V4QYLC6MBBTFTB3NABEDDMAIFLUQWWZPC3QNN5H66YCCSRLEVENZUMZ7BWJRGKOZAYMILYCYCI4OLOE5QLQJO6M24JH4SBABA"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.7fe614bd-3a7c-4e86-a936-071bb7e7ba9b",
+    "locale": "en-US",
+    "timestamp": "2017-01-25T15:27:19Z",
+    "intent": {
+      "name": "AMAZON.NoIntent",
+      "slots": {}
     }
-  }
+  },
+  "version": "1.0"
 }

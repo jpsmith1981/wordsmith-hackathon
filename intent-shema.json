@@ -6,8 +6,97 @@
         {
           "name": "Person",
           "type": "AMAZON.US_FIRST_NAME"
-        }
+        }            
       ]
+    },
+    {
+      "intent": "GetLocationDetailsIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        }            
+      ]
+    }
+    ,
+    {
+      "intent": "GetActivityDetailsIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        }            
+      ]
+    }
+    ,
+    {
+      "intent": "GetIncidentDetailsIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        }            
+      ]
+    }
+    ,
+    {
+      "intent": "GetInteractionDetailsIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        }            
+      ]
+    }
+     ,
+    {
+      "intent": "SpecifyPersonIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        }            
+      ]
+    }
+    ,
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+    ,
+    {
+      "intent": "AMAZON.YesIntent"
+    }
+    ,
+    {
+      "intent": "AMAZON.NoIntent"
+    }
+    ,
+    {
+      "intent": "CustomHelpIntent"
+    }
+     ,
+    {
+      "intent": "AMAZON.StopIntent"
+    }
+     ,
+    {
+      "intent": "TellMeMoreIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        } 
+        ]
+    }
+    ,
+    {
+      "intent": "SendEncouragementIntent",
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        } 
+        ]
     }
   ]
 }
