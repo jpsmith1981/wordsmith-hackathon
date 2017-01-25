@@ -1,0 +1,100 @@
+GetCurrentStatusIntent how is {Person} doing right now
+GetCurrentStatusIntent how is {Person} doing today
+GetCurrentStatusIntent what's up with {Person}
+GetCurrentStatusIntent tell me about {Person}
+GetCurrentStatusIntent how is {Person}
+GetCurrentStatusIntent tell me how {Person} is doing right now
+GetCurrentStatusIntent I want to know how {Person} is doing right now
+GetCurrentStatusIntent how the heck is {Person} doing
+GetCurrentStatusIntent I'm worried about {Person}
+GetCurrentStatusIntent get the latest status for {Person}
+GetCurrentStatusIntent give me the current status for {Person}
+GetCurrentStatusIntent update me on {Person}
+GetCurrentStatusIntent give me an update on {Person}
+GetCurrentStatusIntent should i worry about {Person} today
+GetCurrentStatusIntent give me an update
+GetCurrentStatusIntent give me a status
+GetCurrentStatusIntent what is the latest status
+GetLocationDetailsIntent where is {Person} right now
+GetLocationDetailsIntent where has {Person} been lately
+GetLocationDetailsIntent is {Person} home
+GetLocationDetailsIntent where {Person} is
+GetLocationDetailsIntent at which place is {Person}
+GetLocationDetailsIntent find {Person}
+GetLocationDetailsIntent where is {Person} at
+GetLocationDetailsIntent locate {Person}
+GetLocationDetailsIntent tell me the location of {Person}
+GetLocationDetailsIntent go locate {Person}
+GetLocationDetailsIntent go find {Person}
+GetLocationDetailsIntent if {Person} is at home
+GetLocationDetailsIntent if {Person} is out and about
+GetLocationDetailsIntent if {Person} is indoors
+GetLocationDetailsIntent more about {Person} location
+GetLocationDetailsIntent about {Person} whereabouts
+GetLocationDetailsIntent update on {Person} whereabouts
+GetLocationDetailsIntent about {Person} location
+GetLocationDetailsIntent what can you tell me about {Person} location
+GetActivityDetailsIntent more about {Person} challenges
+GetActivityDetailsIntent more about {Person} steps
+GetActivityDetailsIntent more about {Person} activity
+GetActivityDetailsIntent more about {Person} points
+GetActivityDetailsIntent about {Person} steps
+GetActivityDetailsIntent about {Person} activities
+GetActivityDetailsIntent about {Person} challenges
+GetActivityDetailsIntent about {Person} points
+GetActivityDetailsIntent how many steps {Person} has taken 
+GetActivityDetailsIntent how many steps {Person} has taken today
+GetActivityDetailsIntent how many challenges {Person} has finished
+GetActivityDetailsIntent how many challenges {Person} has done
+GetActivityDetailsIntent how many points {Person} has
+GetActivityDetailsIntent how active {Person} is
+GetActivityDetailsIntent how active {Person} has been
+GetActivityDetailsIntent about {Person} movement
+GetActivityDetailsIntent how many points does {Person} have
+GetActivityDetailsIntent tell me how many points {Person} has
+GetActivityDetailsIntent tell me how many steps {Person} has taken
+GetActivityDetailsIntent tell me how many challenges {Person} has taken
+GetActivityDetailsIntent tell me about {Person} points
+GetActivityDetailsIntent tell me about {Person} steps
+GetActivityDetailsIntent tell me about {Person} challenges
+GetActivityDetailsIntent tell me about {Person} activity
+GetActivityDetailsIntent what can you tell me about {Person} points
+GetActivityDetailsIntent what can you  tell me about {Person} steps
+GetActivityDetailsIntent what can you  tell me about {Person} challenges
+GetActivityDetailsIntent what can you  tell me about {Person} activity
+SpecifyPersonIntent {Person}
+SpecifyPersonIntent I'm talking about {Person}
+SpecifyPersonIntent I would like to know about {Person}
+SpecifyPersonIntent How about {Person}
+SpecifyPersonIntent What about {Person}
+SpecifyPersonIntent Can you tell me about {Person}
+SpecifyPersonIntent tell me the same thing about {Person}
+SpecifyPersonIntent tell me something about {Person}
+SpecifyPersonIntent What can you tell me about {Person}
+SpecifyPersonIntent and {Person}
+GetIncidentDetailsIntent did {Person} call for help
+GetIncidentDetailsIntent did {Person} fall
+GetIncidentDetailsIntent how many times did {Person} call for help
+GetIncidentDetailsIntent how many times did {Person} fall
+GetIncidentDetailsIntent has {Person} been safe
+GetIncidentDetailsIntent is {Person} safe
+GetIncidentDetailsIntent tell me about {Person} safety
+GetIncidentDetailsIntent tell me about {Person} emergencies
+GetIncidentDetailsIntent did {Person} have an emergency
+GetIncidentDetailsIntent did {Person} have any emergencies
+GetInteractionDetailsIntent who did {Person} talk to
+GetInteractionDetailsIntent who did {Person} interact with
+GetInteractionDetailsIntent did {Person} talk to anyone
+GetInteractionDetailsIntent who did {Person} interact with anyone
+GetInteractionDetailsIntent who has liked {Person} activities
+GetInteractionDetailsIntent who has liked {Person} challenges
+GetInteractionDetailsIntent who has sent {Person} a thumbs up
+GetInteractionDetailsIntent did anyone talk to {Person} today
+GetInteractionDetailsIntent did anyone talk to {Person} this week
+GetInteractionDetailsIntent did anyone interact with {Person} today
+GetInteractionDetailsIntent did anyone interact with {Person} this week
+GetInteractionDetailsIntent is {Person} staying connected
+GetInteractionDetailsIntent is {Person} lonely
+GetInteractionDetailsIntent tell me if is {Person} lonely
+GetInteractionDetailsIntent tell me if anyone talked to {Person} 
+GetInteractionDetailsIntent tell me if anyone talked to {Person} lately

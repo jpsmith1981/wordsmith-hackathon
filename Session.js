@@ -1,7 +1,7 @@
 /**
  * Created by scottbrenton on 1/24/17.
  */
-var SessionMap = {
+module.exports = {
     "Mom": {
         profile: {
             userid:1,
