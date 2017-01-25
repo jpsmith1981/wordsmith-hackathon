@@ -36,7 +36,7 @@ var handlers = {
             this.emit(next);
         }
         else{
-            this.emit(':ask', 'Technology is not a replacement for human interaction.  Please call them.');
+            this.emit(':tell', 'Technology is not a replacement for human interaction.  Please call them.');
         }
     },
 
