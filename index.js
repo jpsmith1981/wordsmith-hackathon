@@ -11,7 +11,7 @@ var handlers = {
 
 
     'AMAZON.HelpIntent': function() {
-        var personName = this.getCurrentPersonNameOrNull();
+        var personName = getCurrentPersonNameOrNull(this);
         if (personName != null) {
             this.emit(':ask', 'I can tell you about how ' + personName + ' is doing.  Try saying, how is ' + personName );
         } else {
@@ -75,7 +75,8 @@ var handlers = {
     'AMAZON.NoIntent': function(){
         const previousIntent = this.attributes['previousIntent']; 
         if(previousIntent == 'GetInteractionDetailsIntent') {
-            var data = getCurrentPersonNameOrNull(this);
+            var personName = getCurrentPersonNameOrNull(this);
+            var data = session.findProfileByNameOrNull(personName);
             var pronoun = "They";
             if (data != null) {
                 var g = (data.gender + '').toLowerCase().trim();
@@ -86,7 +87,7 @@ var handlers = {
                     pronoun = 'she';
                 }
             }
-            this.emit(':ask', 'Ok, ' + pronoun + ' are not going to be angry, just disappointed');
+            this.emit(':ask', 'Ok, ' + pronoun + ' are not going to be angry, just disappointed.');
         }
         else {
             this.emit(':ask', 'We do not understand');
