@@ -8,9 +8,7 @@ var SessionMap = {
             name:'Shelley',
             alias:'Mom',
             gender:'Female',
-            relationship:'Mom'
-        },
-        activity:{
+            relationship:'Mom',
             steps: 8189,
             avgdailysteps: 6543,
             challengescompleted: 2,
@@ -49,9 +47,7 @@ var SessionMap = {
             name:'Richard',
             alias:'Dad',
             gender:'Male',
-            relationship:'Dad'
-        },
-        activity:{
+            relationship:'Dad',
             steps: 5432,
             avgdailysteps: 9654,
             challengescompleted: 1,
@@ -83,6 +79,5 @@ var SessionMap = {
                 {'GetIncidentDetailsIntent': false},
                 {'GetInteractionDetailsIntent': false}
             ]}
-    },
-    "Unknown":{}
+    }
 };
