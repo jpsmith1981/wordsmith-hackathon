@@ -34,7 +34,7 @@ var handlers = {
     },
 
     'SendEncouragementIntent': function(){
-
+        this.emit(':ask', 'Thank you, I am sure it is apprechiated');
     },
 
     'YesIntent': function(){
@@ -99,7 +99,15 @@ function executeIntent(context, intentName) {
     }
 
     if(personName) {
-        var data = session.Mom.profile;  // TODO: look up in dictionary
+        let data = null;
+        // session.forEach(datum => {
+        //     if(datum.alaises.indexOf(personName.toLowerCase()) != -1)
+        //     {
+        //         data = datum.profile;
+        //     }
+        // });
+        data = session.Mom.profile;
+        
         console.log(`Slot name ${personName}`);
         wordsmith.projects.find('wshack')
         .then(project => project.templates.find(templateName))
