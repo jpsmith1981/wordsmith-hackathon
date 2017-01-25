@@ -8,6 +8,34 @@ const wordsmithAPIKey = '3861c2becc354261579e06cae7bbbc775dc1c08db5b039c4a514831
 const wordsmith = require('wordsmith-node-sdk')(wordsmithAPIKey, 'GreatCall'); // Make a unique user agent for your app
 
 var handlers = {
+    getCurrentPersonNameOrNull: function(){
+
+        const personSlot = this.event.request.intent.slots.Person;
+        let personName;
+        if(personSlot && personSlot.value) {
+            personName = personSlot.value;
+        } else {
+            personName = null;
+        }
+        return personName;
+    },
+
+    'AMAZON.HelpIntent': function() {
+        var personName = this.getCurrentPersonNameOrNull();
+        if (personName != null) {
+            this.emit(':ask', 'I can tell you about how ' + personName + ' is doing.  Try saying, how is ' + personName );
+        } else {
+            this.emit(':ask', 'I can tell you about how mom or dad is doing', 'Try saying, how is Mom.');
+        }
+      },
+
+    'AMAZON.StopIntent': function(){
+        this.emit(':tell', 'Goodbye.');
+    },
+
+    'Unhandled': function() {
+        this.emit('AMAZON.HelpIntent');
+    },
 
     'GetCurrentStatusIntent': function(){
        executeIntent(this, 'GetCurrentStatusIntent');
@@ -41,7 +69,7 @@ var handlers = {
     },
 
     'SendEncouragementIntent': function(){
-        this.emit(':ask', 'Thank you, I am sure it is apprechiated');
+        this.emit(':ask', 'Thank you, I am sure it is appreciated');
     },
 
     'YesIntent': function(){
@@ -90,6 +118,8 @@ var handlers = {
         
     }
 };
+
+
 
 function executeIntent(context, intentName) {
     const personSlot = context.event.request.intent.slots.Person;
