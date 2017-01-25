@@ -8,17 +8,7 @@ const wordsmithAPIKey = '3861c2becc354261579e06cae7bbbc775dc1c08db5b039c4a514831
 const wordsmith = require('wordsmith-node-sdk')(wordsmithAPIKey, 'GreatCall');
 
 var handlers = {
-    getCurrentPersonNameOrNull: function(){
 
-        const personSlot = this.event.request.intent.slots.Person;
-        let personName;
-        if(personSlot && personSlot.value) {
-            personName = personSlot.value;
-        } else {
-            personName = null;
-        }
-        return personName;
-    },
 
     'AMAZON.HelpIntent': function() {
         var personName = this.getCurrentPersonNameOrNull();
@@ -85,7 +75,7 @@ var handlers = {
     'AMAZON.NoIntent': function(){
         const previousIntent = this.attributes['previousIntent']; 
         if(previousIntent == 'GetInteractionDetailsIntent') {
-            var data = this.getCurrentPersonNameOrNull();
+            var data = getCurrentPersonNameOrNull(this);
             var pronoun = "They";
             if (data != null) {
                 var g = (data.gender + '').toLowerCase().trim();
@@ -130,7 +120,17 @@ var handlers = {
     }
 };
 
+function getCurrentPersonNameOrNull(context){
 
+    const personSlot = context.event.request.intent.slots.Person;
+    let personName;
+    if(personSlot && personSlot.value) {
+        personName = personSlot.value;
+    } else {
+        personName = null;
+    }
+    return personName;
+}
 
 function executeIntent(context, intentName) {
     const personSlot = context.event.request.intent.slots.Person;
