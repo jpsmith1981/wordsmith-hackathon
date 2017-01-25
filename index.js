@@ -44,7 +44,7 @@ var handlers = {
         this.emit(':ask', 'Thank you, I am sure it is apprechiated');
     },
 
-    'YesIntent': function(){
+    'AMAZON.YesIntent': function(){
         const previousIntent = this.attributes['previousIntent'];
         if(previousIntent == 'GetInteractionDetailsIntent'){
             this.emit('SendEncouragementIntent');
@@ -54,7 +54,7 @@ var handlers = {
         }
     },
 
-    'NoIntent': function(){
+    'AMAZON.NoIntent': function(){
         const previousIntent = this.attributes['previousIntent']; 
         if(previousIntent == 'GetInteractionDetailsIntent'){
             this.emit(':ask', 'Ok, They are not going to be angry, just disapointed');
@@ -111,6 +111,10 @@ function executeIntent(context, intentName) {
     // Update history
     if(personName) {
         const data = session.findProfileByNameOrNull(personName);
+        if(!data){
+            context.emit(':ask', 'Sorry, I did not recognize that person.');
+            return;
+        }
         history.push(intentName);
         context.attributes['history'] = history;
         console.log(`Slot name ${personName}`);
