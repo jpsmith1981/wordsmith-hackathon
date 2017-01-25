@@ -5,7 +5,7 @@ const templates = require('./Templates');
 var session = require('./Session');
 
 const wordsmithAPIKey = '3861c2becc354261579e06cae7bbbc775dc1c08db5b039c4a514831375823189';
-const wordsmith = require('wordsmith-node-sdk')(wordsmithAPIKey, 'GreatCall'); // Make a unique user agent for your app
+const wordsmith = require('wordsmith-node-sdk')(wordsmithAPIKey, 'GreatCall');
 
 var handlers = {
 
