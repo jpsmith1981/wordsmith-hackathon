@@ -99,14 +99,7 @@ function executeIntent(context, intentName) {
     }
 
     if(personName) {
-        let data = null;
-        // session.forEach(datum => {
-        //     if(datum.alaises.indexOf(personName.toLowerCase()) != -1)
-        //     {
-        //         data = datum.profile;
-        //     }
-        // });
-        data = session.Mom.profile;
+        const data = session.findProfileByNameOrNull(personName);
         
         console.log(`Slot name ${personName}`);
         wordsmith.projects.find('wshack')
