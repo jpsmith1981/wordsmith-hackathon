@@ -30,7 +30,14 @@ var handlers = {
     },
 
     'TellMeMoreIntent': function(){
-
+        const history = this.attributes['history'] || [];
+        const next = templates.findUnused(history);
+        if(next){
+            this.emit(next);
+        }
+        else{
+            this.emit(':ask', 'Technology is not a replacement for human interaction.  Please call them.');
+        }
     },
 
     'SendEncouragementIntent': function(){
@@ -90,17 +97,22 @@ function executeIntent(context, intentName) {
     let personName;
     const templateName = templates[intentName];
     context.attributes['previousIntent'] = intentName;
+    let history = context.attributes['history'] || [];
+
     if(personSlot && personSlot.value){
         personName = personSlot.value;
         context.attributes['personName'] = personName;
+        history = [];
     }
     else{
         personName = context.attributes['personName'] || null;
     }
 
+    // Update history
     if(personName) {
         const data = session.findProfileByNameOrNull(personName);
-        
+        history.push(intentName);
+        context.attributes['history'] = history;
         console.log(`Slot name ${personName}`);
         wordsmith.projects.find('wshack')
         .then(project => project.templates.find(templateName))
