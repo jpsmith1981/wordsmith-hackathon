@@ -5,7 +5,7 @@ const templates = require('./Templates');
 var session = require('./Session');
 
 const wordsmithAPIKey = '3861c2becc354261579e06cae7bbbc775dc1c08db5b039c4a514831375823189';
-const wordsmith = require('wordsmith-node-sdk')(wordsmithAPIKey, 'GreatCall'); // Make a unique user agent for your app
+const wordsmith = require('wordsmith-node-sdk')(wordsmithAPIKey, 'GreatCall');
 
 var handlers = {
     getCurrentPersonNameOrNull: function(){
@@ -64,7 +64,7 @@ var handlers = {
             this.emit(next);
         }
         else{
-            this.emit(':ask', 'Technology is not a replacement for human interaction.  Please call them.');
+            this.emit(':tell', 'Technology is not a replacement for human interaction.  Please call them.');
         }
     },
 
@@ -72,7 +72,7 @@ var handlers = {
         this.emit(':ask', 'Thank you, I am sure it is appreciated');
     },
 
-    'YesIntent': function(){
+    'AMAZON.YesIntent': function(){
         const previousIntent = this.attributes['previousIntent'];
         if(previousIntent == 'GetInteractionDetailsIntent'){
             this.emit('SendEncouragementIntent');
@@ -82,7 +82,7 @@ var handlers = {
         }
     },
 
-    'NoIntent': function(){
+    'AMAZON.NoIntent': function(){
         const previousIntent = this.attributes['previousIntent']; 
         if(previousIntent == 'GetInteractionDetailsIntent'){
             this.emit(':ask', 'Ok, They are not going to be angry, just disapointed');
@@ -141,6 +141,10 @@ function executeIntent(context, intentName) {
     // Update history
     if(personName) {
         const data = session.findProfileByNameOrNull(personName);
+        if(!data){
+            context.emit(':ask', 'Sorry, I did not recognize that person.');
+            return;
+        }
         history.push(intentName);
         context.attributes['history'] = history;
         console.log(`Slot name ${personName}`);

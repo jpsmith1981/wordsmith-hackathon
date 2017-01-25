@@ -3,7 +3,7 @@
  */
 module.exports = {
     "Mom": {
-        aliases:['mom','mom\'s', 'shelley', 'shelley\'s'],
+        aliases:['mom','mom\'s', 'shelly', 'shelly\'s', 'shelley', 'shelley\'s'],
         profile: {
             userid:1,
             name:'Shelley',
@@ -13,7 +13,7 @@ module.exports = {
             steps: 8189,
             avgdailysteps: 6543,
             challengescompleted: 2,
-            pointsearned: 8546,
+            pointsearned: 692,
             lastknownlocation: "Home",
             lastknownlocationtimestamp: 12,
             previousknownlocation: "Doctor's Office",
@@ -53,7 +53,7 @@ module.exports = {
             steps: 5432,
             avgdailysteps: 9654,
             challengescompleted: 1,
-            pointsearned: 2100,
+            pointsearned: 477,
             lastknownlocation: "Out and About",
             lastknownlocationtimestamp: 11,
             previousknownlocation: "Casino",
